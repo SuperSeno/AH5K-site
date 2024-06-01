@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AH5K</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+        }
+        header h1 {
+            color: #000;
+            font-size: 36px;
+            margin: 0;
+        }
+        header h1 span {
+            color: #d32f2f;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+        }
+        section {
+            padding: 50px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 30px;
+            color: #000;
+        }
+        .about-us, .our-team, .our-stores, .contact-us {
+            margin-bottom: 40px;
+        }
+        .about-us img, .our-stores img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .our-team {
+            text-align: center;
+        }
+        .team-member {
+            text-align: center;
+            margin: 20px;
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .team-member h3 {
+            margin: 10px 0 5px;
+        }
+        .team-member p {
+            color: #666;
+        }
+        .store {
+            margin: 20px 0;
+        }
+        .store img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .store h3 {
+            margin: 10px 0 5px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .contact-form button {
+            padding: 10px;
+            background-color: #d32f2f;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #c1272d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AH<span>5K</span></h1>
+    </header>
+    <div class="container">
+        <section id="about">
+            <div class="about-us">
+                <h2 class="section-title">About AH5K</h2>
+                <p>AH5K stands for Ahmed Farag and Hady Abou El Kheir, the founders, and 5K represents their five kids. AH5K owns and operates franchise stores, starting with Teaspoon. We currently have three locations and are continuously expanding. Our mission is to expand and bring delightful experiences to our customers through our growing number of stores.</p>
+                <img src="images/about.jpg" alt="About AH5K">
+            </div>
+        </section>
+        <section id="team">
+            <div class="our-team">
+                <h2 class="section-title">Our Team</h2>
+
+                <div class="team-member">
+                    <img src="images/hady.jpg" alt="Hady Abou El Kheir">
+                    <h3>Hady Abou El Kheir</h3>
+                    <p>Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/ahmed.jpg" alt="Ahmed Farag">
+                    <h3>Ahmed Farag</h3>
+                    <p>Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/sarah.jpg" alt="Sarah Blazik">
+                    <h3>Sarah Blazik</h3>
+                    <p>Store Manager</p>
+                </div>
+            </div>
+        </section>
+        <section id="stores">
+            <div class="our-stores">
+                <h2 class="section-title">Our Stores</h2>
+                <div class="store">
+                    <h3>Teaspoon - Folsom, CA</h3>
+                    <p>1171 Riley St, Folsom, CA</p>
+                    <img src="images/folsom-store.jpg" alt="Teaspoon Folsom">
+                </div>
+                <div class="store">
+                    <h3>Teaspoon - Davis, CA</h3>
+                    <p>110 F St Ste D, Davis, CA</p>
+                    <img src="images/davis-store.jpg" alt="Teaspoon Davis">
+                </div>
+                <div class="store">
+                    <h3>Teaspoon - Sacramento, CA</h3>
+                    <p>Coming Soon!</p>
+                    <img src="images/sacramento-store.jpg" alt="Teaspoon Sacramento">
+                </div>
+                <div class="store">
+                    <h3>More stores opening soon!</h3>
+                    <img src="images/coming-soon.jpg" alt="More stores coming soon">
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contact-us">
+                <h2 class="section-title">Contact Us</h2>
+                <form class="contact-form" id="contact-form" action="https://formspree.io/f/xvoejkpq" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="_replyto" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    
+        <!-- Your other HTML content here -->
+    
+        <script>
+            // JavaScript code to handle form submission
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+    
+                // Send the form data using Fetch API
+                fetch(event.target.action, {
+                    method: 'POST',
+                    body: new FormData(event.target)
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // If form submission is successful, show a popup message
+                        alert('Message submitted successfully!');
+                        // Optionally, you can redirect the user to a thank you page here
+                    } else {
+                        // If form submission fails, show an error message
+                        alert('Something went wrong. Please try again later.');
+                    }
+                })
+                .catch(error => {
+                    // If an error occurs during form submission, show an error message
+                    alert('An error occurred. Please try again later.');
+                });
+            });
+        </script>
+        
+    </div>
+</body>
+</html>
